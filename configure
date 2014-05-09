@@ -19795,7 +19795,7 @@ fi
 
 
 
-    subdirs="$subdirs libltdl"
+    subdirs="$subdirs"
 
 
 
