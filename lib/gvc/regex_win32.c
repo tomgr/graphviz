@@ -3645,19 +3645,19 @@ re_search_2(struct re_pattern_buffer *bufp,
 
 /* Free everything we malloc.  */
 #ifdef MATCH_MAY_ALLOCATE
-#define FREE_VAR(var) if (var) REGEX_FREE (var); var = NULL
+#define FREE_VAR(cast, var) if (var) REGEX_FREE (cast var); var = NULL
 #define FREE_VARIABLES()                                                \
   do {                                                                  \
     REGEX_FREE_STACK (fail_stack.stack);                                \
-    FREE_VAR ((void*) regstart);                                        \
-    FREE_VAR ((void*) regend);                                          \
-    FREE_VAR ((void*) old_regstart);                                    \
-    FREE_VAR ((void*) old_regend);                                      \
-    FREE_VAR ((void*) best_regstart);                                   \
-    FREE_VAR ((void*) best_regend);                                     \
-    FREE_VAR ((void*) reg_info);                                        \
-    FREE_VAR ((void*) reg_dummy);                                       \
-    FREE_VAR ((void*) reg_info_dummy);                                  \
+    FREE_VAR ((void*), regstart);                                        \
+    FREE_VAR ((void*), regend);                                          \
+    FREE_VAR ((void*), old_regstart);                                    \
+    FREE_VAR ((void*), old_regend);                                      \
+    FREE_VAR ((void*), best_regstart);                                   \
+    FREE_VAR ((void*), best_regend);                                     \
+    FREE_VAR ((void*), reg_info);                                        \
+    FREE_VAR ((void*), reg_dummy);                                       \
+    FREE_VAR ((void*), reg_info_dummy);                                  \
   } while (0)
 #else
 #define FREE_VARIABLES() ((void)0) /* Do nothing!  But inhibit gcc warning.  */
