@@ -35,17 +35,13 @@
 #   define external __IMPORT__
 #endif
 #if defined(GVDLL)
-#if !defined(_BLD_gvc)
-#define extern	__declspec(dllimport)
-#else
-#define extern __declspec(dllexport)
-#endif
+#define extern
 #endif
 #endif
 /*visual studio*/
 #ifdef WIN32_DLL
 #ifndef GVC_EXPORTS
-#define extern __declspec(dllimport)
+#define extern
 #endif
 #endif
 /*end visual studio*/

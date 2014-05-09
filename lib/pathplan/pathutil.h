@@ -34,7 +34,7 @@ extern "C" {
 /*visual studio*/
 #ifdef WIN32_DLL
 #ifndef PATHPLAN_EXPORTS
-#define extern __declspec(dllimport)
+#define extern
 #endif
 #endif
 /*end visual studio*/

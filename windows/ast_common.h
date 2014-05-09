@@ -80,10 +80,10 @@
 /* dynamic linked library external scope handling */
 #undef extern
 #if _dll_import && !defined(__EXPORT__) && _DLL_BLD
-#define __EXPORT__	__declspec(dllexport)
+#define __EXPORT__
 #endif
 #if _dll_import && !defined(__IMPORT__)
-#define __IMPORT__	__declspec(dllimport)
+#define __IMPORT__
 #endif
 #if !defined(_astimport)
 #if defined(__IMPORT__) && _DLL_BLD

@@ -23,13 +23,13 @@ extern "C" {
 #endif
 
 #ifdef GVDLL
-#  define extern __declspec(dllexport)
+#  define extern
 #endif
 
 /*visual studio*/
 #ifdef WIN32_DLL
 #ifndef GVC_EXPORTS
-#define extern __declspec(dllimport)
+#define extern
 #endif
 #endif
 /*end visual studio*/

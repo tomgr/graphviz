@@ -133,10 +133,7 @@ extern "C" {
 #endif
 /*visual studio*/
 #ifdef WIN32_DLL
-#ifndef GRAPH_EXPORTS
-#define extern __declspec(dllimport)
-#else
-#define extern __declspec(dllexport)
+#define extern
 #endif
 
 #endif

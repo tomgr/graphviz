@@ -36,8 +36,8 @@ extern int		strcmp _ARG_((const char*, const char*));
 #endif
 
 #ifdef WIN32
-#define __EXPORT__  __declspec (dllexport)
-#define __IMPORT__	__declspec (dllimport)
+#define __EXPORT__
+#define __IMPORT__
 #endif
 
 

@@ -57,21 +57,10 @@ extern "C" {
     } epsf_t;
 
     typedef void (*nodesizefn_t) (Agnode_t *, boolean);
-#ifdef GVDLL
-#define extern __declspec(dllexport)
-#else
+
 #define extern
-#endif
 
-/*visual studio*/
-#ifdef WIN32_DLL
-#ifndef GVC_EXPORTS
-#define extern __declspec(dllimport)
-#endif
-#endif
-/*end visual studio*/
-
-	extern void add_box(path *, boxf);
+    extern void add_box(path *, boxf);
     extern void arrow_flags(Agedge_t * e, int *sflag, int *eflag);
     extern boxf arrow_bb(pointf p, pointf u, double arrowsize, int flag);
     extern void arrow_gen(GVJ_t * job, emit_state_t emit_state, pointf p, pointf u,

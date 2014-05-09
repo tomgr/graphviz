@@ -20,19 +20,7 @@
 extern "C" {
 #endif
 
-#ifdef GVDLL
-#define extern __declspec(dllexport)
-#else
 #define extern
-#endif
-
-/*visual studio*/
-#ifdef WIN32_DLL
-#ifndef GVC_EXPORTS
-#define extern __declspec(dllimport)
-#endif
-#endif
-/*end visual studio*/
 
     extern size_t gvwrite (GVJ_t * job, const char *s, size_t len);
     extern size_t gvfwrite (const void *ptr, size_t size, size_t nmemb, FILE *stream);

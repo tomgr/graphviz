@@ -65,9 +65,8 @@ extern "C" {
 /*visual studio*/
 #ifdef WIN32_DLL
 #ifndef GVC_EXPORTS
-__declspec(dllimport) lt_symlist_t lt_preloaded_symbols[];
+lt_symlist_t lt_preloaded_symbols[];
 #else
-//__declspec(dllexport) lt_symlist_t lt_preloaded_symbols[];
 //lt_symlist_t lt_preloaded_symbols[];
 #endif
 #endif
@@ -76,7 +75,7 @@ __declspec(dllimport) lt_symlist_t lt_preloaded_symbols[];
 
 #ifndef WIN32_DLL
 #if defined(GVDLL)
-	__declspec(dllexport) lt_symlist_t lt_preloaded_symbols[];
+	lt_symlist_t lt_preloaded_symbols[];
 #else
 #if !defined(LTDL_H)
 	extern lt_symlist_t lt_preloaded_symbols[];

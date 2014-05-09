@@ -181,13 +181,13 @@ struct Agdisc_s {		/* user's discipline */
 
 	/* default resource disciplines */
 #if !defined(_BLD_cgraph) && defined(GVDLL)
-#define extern  __declspec(dllimport)
+#define extern
 #endif
 
 /*visual studio*/
 #ifdef WIN32_DLL
 #ifndef CGRAPH_EXPORTS
-#define extern __declspec(dllimport)
+#define extern
 #endif
 #endif
 /*end visual studio*/
@@ -425,7 +425,7 @@ extern agusererrf agseterrf(agusererrf);
 #   endif
 #endif
 #if !defined(_BLD_cgraph) && defined(GVDLL)
-#define extern  __declspec(dllimport)
+#define extern
 #endif
 
 extern Agdesc_t Agdirected, Agstrictdirected, Agundirected,
